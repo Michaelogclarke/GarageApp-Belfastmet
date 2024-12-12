@@ -1,6 +1,6 @@
 ﻿Public Class AdminLogin
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If tbUsername.Text = "Admin1" And tbPassword.Text = "Password1" Then
+        If tbUsername.Text = "Admin" And tbPassword.Text = "Password1" Then
             AdminPage.Show()
             Me.Hide()
             Me.Dispose()

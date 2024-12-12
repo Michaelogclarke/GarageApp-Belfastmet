@@ -29,7 +29,10 @@ Public Class frmFuelPump
 
 
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
-
+        Checkout.Show()
+        Me.Hide()
+        Me.Dispose()
+        'TODO find a way to write total price and total pumed to a dataset here
     End Sub
 
     Private Sub rbDiesel_CheckedChanged(sender As Object, e As EventArgs) Handles rbDiesel.CheckedChanged
