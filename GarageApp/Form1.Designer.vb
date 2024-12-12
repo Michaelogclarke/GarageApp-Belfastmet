@@ -25,11 +25,21 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnStartTransaction = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Timer1
         '
         Me.Timer1.Interval = 2000
+        '
+        'btnStartTransaction
+        '
+        Me.btnStartTransaction.Location = New System.Drawing.Point(349, 267)
+        Me.btnStartTransaction.Name = "btnStartTransaction"
+        Me.btnStartTransaction.Size = New System.Drawing.Size(75, 23)
+        Me.btnStartTransaction.TabIndex = 0
+        Me.btnStartTransaction.Text = "Start transaction"
+        Me.btnStartTransaction.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -38,10 +48,12 @@ Partial Class Form1
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(744, 425)
+        Me.Controls.Add(Me.btnStartTransaction)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents btnStartTransaction As Button
 End Class
