@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class AdminPage
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Checkout
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,32 +20,32 @@ Partial Class AdminPage
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblTotalFuel = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'lblTotalFuel
+        'Label1
         '
-        Me.lblTotalFuel.AutoSize = True
-        Me.lblTotalFuel.Location = New System.Drawing.Point(380, 107)
-        Me.lblTotalFuel.Name = "lblTotalFuel"
-        Me.lblTotalFuel.Size = New System.Drawing.Size(54, 13)
-        Me.lblTotalFuel.TabIndex = 0
-        Me.lblTotalFuel.Text = "Total Fuel"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(326, 159)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Label1"
         '
-        'AdminPage
+        'Checkout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.lblTotalFuel)
-        Me.Name = "AdminPage"
-        Me.Text = "AdminPage"
+        Me.Controls.Add(Me.Label1)
+        Me.Name = "Checkout"
+        Me.Text = "Checkout"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents lblTotalFuel As Label
+    Friend WithEvents Label1 As Label
 End Class

@@ -36,6 +36,8 @@ Partial Class frmFuelPump
         Me.petrolPriceTmr = New System.Windows.Forms.Timer(Me.components)
         Me.DieselPricetmr = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.AdminData1 = New GarageApp.AdminData()
+        CType(Me.AdminData1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCloseProgram
@@ -142,6 +144,11 @@ Partial Class frmFuelPump
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Hold"
         '
+        'AdminData1
+        '
+        Me.AdminData1.DataSetName = "AdminData"
+        Me.AdminData1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'frmFuelPump
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -159,6 +166,7 @@ Partial Class frmFuelPump
         Me.Controls.Add(Me.btnCloseProgram)
         Me.Name = "frmFuelPump"
         Me.Text = "frmFuelPump"
+        CType(Me.AdminData1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -177,4 +185,5 @@ Partial Class frmFuelPump
     Friend WithEvents petrolPriceTmr As Timer
     Friend WithEvents DieselPricetmr As Timer
     Friend WithEvents Label1 As Label
+    Friend WithEvents AdminData1 As AdminData
 End Class

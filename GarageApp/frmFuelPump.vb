@@ -1,9 +1,10 @@
 ﻿Imports System.Reflection
 
+
 Public Class frmFuelPump
 
     Private Sub frmFuelPump_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
+
     End Sub
 
     Private Sub btnCloseProgram_Click(sender As Object, e As EventArgs) Handles btnCloseProgram.Click
@@ -11,7 +12,7 @@ Public Class frmFuelPump
         Me.Dispose()
     End Sub
 
-    Private Sub btnPumpFuelMouseDown(sender As Object, e As EventArgs) Handles btnPumpFuel.MouseDown
+    Public Sub btnPumpFuelMouseDown(sender As Object, e As EventArgs) Handles btnPumpFuel.MouseDown
         If rbDiesel.Checked() Then
             Timer1.Enabled = True
             DieselPricetmr.Enabled = True
@@ -19,6 +20,7 @@ Public Class frmFuelPump
         ElseIf rbpetrol.Checked() Then
             Timer1.Enabled = True
             petrolPriceTmr.Enabled = True
+
         Else
             MessageBox.Show("Choose a fuel type")
         End If
@@ -57,25 +59,27 @@ Public Class frmFuelPump
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If rbDiesel.Checked Then
             Dim currentLitresDiesel As Double = Val(lblLitresAmount.Text.Replace(" L", ""))
-            currentLitresDiesel += 0.42
-
+            currentLitresDiesel += LitresDiesel
             lblLitresAmount.Text = currentLitresDiesel.ToString("0.0") & " L"
 
             Dim currentPriceDiesel As Double = Val(lblPriceAmount.Text.Replace("£", ""))
-            currentPriceDiesel += 0.67
+            currentPriceDiesel += PriceDiesel
 
             lblPriceAmount.Text = currentPriceDiesel.ToString("£0.0")
         ElseIf rbpetrol.Checked Then
             Dim currentLitresPetrol As Double = Val(lblLitresAmount.Text.Replace(" L", ""))
-            currentLitresPetrol += 0.35
+            currentLitresPetrol += LitresPetrol
 
             lblLitresAmount.Text = currentLitresPetrol.ToString("0.0") & " L"
 
             Dim currentPricePetrol As Double = Val(lblPriceAmount.Text.Replace("£", ""))
-            currentPricePetrol += 0.71
+            currentPricePetrol += PricePetrol
 
             lblPriceAmount.Text = currentPricePetrol.ToString("£0.0")
+
         End If
+
+
 
     End Sub
 

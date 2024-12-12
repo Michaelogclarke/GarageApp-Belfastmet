@@ -73,6 +73,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminData.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdminData.vb">
+      <DependentUpon>AdminData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AdminLogin.Designer.vb">
       <DependentUpon>AdminLogin.vb</DependentUpon>
     </Compile>
@@ -83,6 +91,12 @@
       <DependentUpon>AdminPage.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout.Designer.vb">
+      <DependentUpon>Checkout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -104,6 +118,7 @@
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="modGlobals.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -127,6 +142,9 @@
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +162,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AdminData.xsc">
+      <DependentUpon>AdminData.xsd</DependentUpon>
+    </None>
+    <None Include="AdminData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdminData.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="AdminData.xss">
+      <DependentUpon>AdminData.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
