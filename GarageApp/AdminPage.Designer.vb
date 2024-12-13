@@ -28,7 +28,7 @@ Partial Class AdminPage
         'lblTotalFuel
         '
         Me.lblTotalFuel.AutoSize = True
-        Me.lblTotalFuel.Location = New System.Drawing.Point(380, 107)
+        Me.lblTotalFuel.Location = New System.Drawing.Point(360, 100)
         Me.lblTotalFuel.Name = "lblTotalFuel"
         Me.lblTotalFuel.Size = New System.Drawing.Size(54, 13)
         Me.lblTotalFuel.TabIndex = 0
@@ -38,6 +38,7 @@ Partial Class AdminPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MediumPurple
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lblTotalFuel)
         Me.Name = "AdminPage"

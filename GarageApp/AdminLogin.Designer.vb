@@ -75,6 +75,7 @@ Partial Class AdminLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MediumPurple
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.lblPassword)
@@ -82,7 +83,6 @@ Partial Class AdminLogin
         Me.Controls.Add(Me.tbPassword)
         Me.Controls.Add(Me.tbUsername)
         Me.Name = "AdminLogin"
-        Me.Text = "q"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
