@@ -5,7 +5,6 @@ Public Class Checkout
         Label1.Text = labelTotalPrice
         Label2.Text = labelTotalFuel
         btnPayment.Text = "Pay " + labelTotalPrice
-        modGlobals.InitializeFuelData()
 
     End Sub
 
@@ -14,12 +13,8 @@ Public Class Checkout
     End Sub
 
     Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
-
-        Dim fuel As Double = Val(labelTotalFuel)
-        Dim price As Double = Val(labelTotalPrice)
-
-        modGlobals.AddFuel(fuel, price)
-
+        System.IO.File.WriteAllText("fuelAmount.txt", Label2.Text)
+        System.IO.File.WriteAllText("fuelPrice.txt", Label1.Text)
         frmPaymentConfirmation.Show()
         Me.Dispose()
     End Sub

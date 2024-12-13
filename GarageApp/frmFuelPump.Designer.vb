@@ -42,27 +42,30 @@ Partial Class frmFuelPump
         '
         'btnCloseProgram
         '
-        Me.btnCloseProgram.Location = New System.Drawing.Point(701, 415)
+        Me.btnCloseProgram.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.btnCloseProgram.Location = New System.Drawing.Point(698, 407)
         Me.btnCloseProgram.Name = "btnCloseProgram"
-        Me.btnCloseProgram.Size = New System.Drawing.Size(75, 23)
+        Me.btnCloseProgram.Size = New System.Drawing.Size(78, 31)
         Me.btnCloseProgram.TabIndex = 0
         Me.btnCloseProgram.Text = "Close"
         Me.btnCloseProgram.UseVisualStyleBackColor = True
         '
         'btnPumpFuel
         '
-        Me.btnPumpFuel.Location = New System.Drawing.Point(603, 275)
+        Me.btnPumpFuel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.btnPumpFuel.Location = New System.Drawing.Point(366, 245)
         Me.btnPumpFuel.Name = "btnPumpFuel"
-        Me.btnPumpFuel.Size = New System.Drawing.Size(75, 23)
+        Me.btnPumpFuel.Size = New System.Drawing.Size(75, 33)
         Me.btnPumpFuel.TabIndex = 1
         Me.btnPumpFuel.Text = "Start Fuel"
         Me.btnPumpFuel.UseVisualStyleBackColor = True
         '
         'btnPay
         '
-        Me.btnPay.Location = New System.Drawing.Point(333, 347)
+        Me.btnPay.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.btnPay.Location = New System.Drawing.Point(366, 320)
         Me.btnPay.Name = "btnPay"
-        Me.btnPay.Size = New System.Drawing.Size(75, 23)
+        Me.btnPay.Size = New System.Drawing.Size(75, 36)
         Me.btnPay.TabIndex = 2
         Me.btnPay.Text = "Pay"
         Me.btnPay.UseVisualStyleBackColor = True
@@ -70,9 +73,10 @@ Partial Class frmFuelPump
         'rbpetrol
         '
         Me.rbpetrol.AutoSize = True
-        Me.rbpetrol.Location = New System.Drawing.Point(550, 215)
+        Me.rbpetrol.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.rbpetrol.Location = New System.Drawing.Point(305, 174)
         Me.rbpetrol.Name = "rbpetrol"
-        Me.rbpetrol.Size = New System.Drawing.Size(52, 17)
+        Me.rbpetrol.Size = New System.Drawing.Size(76, 28)
         Me.rbpetrol.TabIndex = 3
         Me.rbpetrol.TabStop = True
         Me.rbpetrol.Text = "Petrol"
@@ -81,9 +85,10 @@ Partial Class frmFuelPump
         'rbDiesel
         '
         Me.rbDiesel.AutoSize = True
-        Me.rbDiesel.Location = New System.Drawing.Point(686, 215)
+        Me.rbDiesel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.rbDiesel.Location = New System.Drawing.Point(441, 174)
         Me.rbDiesel.Name = "rbDiesel"
-        Me.rbDiesel.Size = New System.Drawing.Size(54, 17)
+        Me.rbDiesel.Size = New System.Drawing.Size(80, 28)
         Me.rbDiesel.TabIndex = 4
         Me.rbDiesel.TabStop = True
         Me.rbDiesel.Text = "Diesel"
@@ -92,36 +97,40 @@ Partial Class frmFuelPump
         'lbLitres
         '
         Me.lbLitres.AutoSize = True
-        Me.lbLitres.Location = New System.Drawing.Point(574, 91)
+        Me.lbLitres.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.lbLitres.Location = New System.Drawing.Point(329, 50)
         Me.lbLitres.Name = "lbLitres"
-        Me.lbLitres.Size = New System.Drawing.Size(32, 13)
+        Me.lbLitres.Size = New System.Drawing.Size(54, 24)
         Me.lbLitres.TabIndex = 5
         Me.lbLitres.Text = "Litres"
         '
         'lblPrice
         '
         Me.lblPrice.AutoSize = True
-        Me.lblPrice.Location = New System.Drawing.Point(574, 130)
+        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.lblPrice.Location = New System.Drawing.Point(329, 89)
         Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(31, 13)
+        Me.lblPrice.Size = New System.Drawing.Size(53, 24)
         Me.lblPrice.TabIndex = 6
         Me.lblPrice.Text = "Price"
         '
         'lblPriceAmount
         '
         Me.lblPriceAmount.AutoSize = True
-        Me.lblPriceAmount.Location = New System.Drawing.Point(675, 130)
+        Me.lblPriceAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.lblPriceAmount.Location = New System.Drawing.Point(430, 89)
         Me.lblPriceAmount.Name = "lblPriceAmount"
-        Me.lblPriceAmount.Size = New System.Drawing.Size(34, 13)
+        Me.lblPriceAmount.Size = New System.Drawing.Size(55, 24)
         Me.lblPriceAmount.TabIndex = 7
         Me.lblPriceAmount.Text = "£0.00"
         '
         'lblLitresAmount
         '
         Me.lblLitresAmount.AutoSize = True
-        Me.lblLitresAmount.Location = New System.Drawing.Point(672, 91)
+        Me.lblLitresAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.lblLitresAmount.Location = New System.Drawing.Point(427, 50)
         Me.lblLitresAmount.Name = "lblLitresAmount"
-        Me.lblLitresAmount.Size = New System.Drawing.Size(34, 13)
+        Me.lblLitresAmount.Size = New System.Drawing.Size(55, 24)
         Me.lblLitresAmount.TabIndex = 8
         Me.lblLitresAmount.Text = "0.00L"
         '
@@ -138,9 +147,10 @@ Partial Class frmFuelPump
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(623, 259)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.Label1.Location = New System.Drawing.Point(378, 218)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(29, 13)
+        Me.Label1.Size = New System.Drawing.Size(50, 24)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Hold"
         '

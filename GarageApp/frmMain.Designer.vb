@@ -24,6 +24,7 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.btnStart = New System.Windows.Forms.Button()
         Me.btnAdminLogin = New System.Windows.Forms.Button()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnStart
@@ -44,20 +45,33 @@ Partial Class frmMain
         Me.btnAdminLogin.Text = "Admin Login"
         Me.btnAdminLogin.UseVisualStyleBackColor = True
         '
+        'lblName
+        '
+        Me.lblName.AutoSize = True
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        Me.lblName.Location = New System.Drawing.Point(306, 62)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(190, 31)
+        Me.lblName.TabIndex = 2
+        Me.lblName.Text = "Garages R US"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MediumPurple
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.btnAdminLogin)
         Me.Controls.Add(Me.btnStart)
         Me.Name = "frmMain"
         Me.Text = "frmMain"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents btnStart As Button
     Friend WithEvents btnAdminLogin As Button
+    Friend WithEvents lblName As Label
 End Class

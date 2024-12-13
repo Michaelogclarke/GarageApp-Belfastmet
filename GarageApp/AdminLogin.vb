@@ -4,7 +4,8 @@
             AdminPage.Show()
             Me.Dispose()
         Else
-            MessageBox.Show("Wrong password try again")
+            MessageBox.Show("Username is Admin, Password is Password")
+
         End If
     End Sub
 
@@ -17,6 +18,10 @@
     End Sub
 
     Private Sub AdminLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 End Class

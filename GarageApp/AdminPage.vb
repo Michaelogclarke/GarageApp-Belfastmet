@@ -1,22 +1,14 @@
-﻿Public Class AdminPage
-    Private Const XmlFilePath As String = "/FuelData.xml"
+﻿Imports System.Reflection.Emit
+
+Public Class AdminPage
     Private Sub AdminPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        frmFuelPump.lblLitresAmount = lblTotalFuel
-        modGlobals.LoadFuelDataFromXML(XmlFilePath)
+        If System.IO.File.Exists("fuelAmount.txt") Then
+            lblFueltxt.Text = System.IO.File.ReadAllText("fuelAmount.txt")
+            lblPricetxt.Text = System.IO.File.ReadAllText("fuelPrice.txt")
+        End If
 
-
-        DataGridView1.DataSource = modGlobals.FuelData
 
     End Sub
     Private Sub AdminPage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        modGlobals.saveFuelDataToXml(XmlFilePath)
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
     End Sub
 End Class

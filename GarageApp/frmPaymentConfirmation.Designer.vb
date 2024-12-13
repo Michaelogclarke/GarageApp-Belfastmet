@@ -45,9 +45,9 @@ Partial Class frmPaymentConfirmation
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.Label2.Location = New System.Drawing.Point(190, 334)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(369, 24)
+        Me.Label2.Size = New System.Drawing.Size(380, 24)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "You will now return to the Fuel PumpScren"
+        Me.Label2.Text = "You will now return to the Fuel PumpScreen" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label3
         '
