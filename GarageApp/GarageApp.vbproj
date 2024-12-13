@@ -118,6 +118,12 @@
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPaymentConfirmation.Designer.vb">
+      <DependentUpon>frmPaymentConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaymentConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="modGlobals.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaymentConfirmation.resx">
+      <DependentUpon>frmPaymentConfirmation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

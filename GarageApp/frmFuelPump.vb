@@ -46,7 +46,7 @@
         'MessageBox.Show("Failed as an exception")
         'End Try
         labelTotalPrice = lblPriceAmount.Text
-
+        labelTotalFuel = lblLitresAmount.Text
         Checkout.Show()
         Me.Hide()
         Me.Dispose()
