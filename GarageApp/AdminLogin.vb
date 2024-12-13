@@ -2,7 +2,6 @@
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If tbUsername.Text = "Admin" And tbPassword.Text = "Password" Then
             AdminPage.Show()
-            Me.Hide()
             Me.Dispose()
         Else
             MessageBox.Show("Wrong password try again")

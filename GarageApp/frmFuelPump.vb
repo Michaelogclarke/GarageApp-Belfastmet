@@ -1,12 +1,13 @@
 ﻿Imports System.Reflection
 
 Public Class frmFuelPump
+    Dim dataSet As New DataSet("MyDataSet")
+    Dim mydataTable As New DataTable("MyTable")
+
     Private Sub frmFuelPump_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim dataSet As New DataSet("MyDataSet")
-        Dim mydataTable As New DataTable("MyTable")
 
         mydataTable.Columns.Add("Total Price", GetType(Double))
-        dataSet.Tables.Add(mydataTable)
+        DataSet.Tables.Add(mydataTable)
 
     End Sub
 
@@ -32,21 +33,21 @@ Public Class frmFuelPump
 
 
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
-        Checkout.Show()
-        Me.Hide()
-        Me.Dispose()
+        'Checkout.Show()
+        'Me.Hide()
+        'Me.Dispose()
         'TODO find a way to write total price and total pumed to a dataset here
         Try
-            ' Getting the total price
-            Dim labelValue As Double = Convert.ToDouble(lblPriceAmount.Text)
+            Dim labelValue As Double = Val(lblPriceAmount.Text.Replace("£", ""))
 
             Dim newRow As DataRow = mydataTable.NewRow()
             newRow("Total Price") = labelValue
             mydataTable.Rows.Add(newRow)
 
-            MessageBox.Show("Total Price: " & labelValue)
+            MessageBox.Show("Total Price added: " & labelValue)
+
         Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
+            MessageBox.Show("Failed as an exception")
         End Try
 
     End Sub
