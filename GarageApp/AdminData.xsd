@@ -9,10 +9,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="AdminData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="AdminData" msprop:Generator_DataSetName="AdminData">
+  <xs:element name="AdminData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AdminData" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AdminData">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Total_x0020_Fuel_x0020_pumped" msprop:Generator_RowEvHandlerName="Total_Fuel_pumpedRowChangeEventHandler" msprop:Generator_RowDeletedName="Total_Fuel_pumpedRowDeleted" msprop:Generator_RowDeletingName="Total_Fuel_pumpedRowDeleting" msprop:Generator_RowEvArgName="Total_Fuel_pumpedRowChangeEvent" msprop:Generator_TablePropName="Total_Fuel_pumped" msprop:Generator_RowChangedName="Total_Fuel_pumpedRowChanged" msprop:Generator_RowChangingName="Total_Fuel_pumpedRowChanging" msprop:Generator_TableClassName="Total_Fuel_pumpedDataTable" msprop:Generator_RowClassName="Total_Fuel_pumpedRow" msprop:Generator_TableVarName="tableTotal_Fuel_pumped" msprop:Generator_UserTableName="Total Fuel pumped">
+        <xs:element name="Total_x0020_Fuel_x0020_pumped" msprop:Generator_RowClassName="Total_Fuel_pumpedRow" msprop:Generator_RowEvHandlerName="Total_Fuel_pumpedRowChangeEventHandler" msprop:Generator_RowDeletedName="Total_Fuel_pumpedRowDeleted" msprop:Generator_RowDeletingName="Total_Fuel_pumpedRowDeleting" msprop:Generator_RowEvArgName="Total_Fuel_pumpedRowChangeEvent" msprop:Generator_TablePropName="Total_Fuel_pumped" msprop:Generator_RowChangedName="Total_Fuel_pumpedRowChanged" msprop:Generator_UserTableName="Total Fuel pumped" msprop:Generator_RowChangingName="Total_Fuel_pumpedRowChanging" msprop:Generator_TableClassName="Total_Fuel_pumpedDataTable" msprop:Generator_TableVarName="tableTotal_Fuel_pumped">
           <xs:complexType>
           </xs:complexType>
         </xs:element>
