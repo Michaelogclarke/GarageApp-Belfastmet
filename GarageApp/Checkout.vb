@@ -1,5 +1,7 @@
 ﻿Public Class Checkout
     Private Sub Checkout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label1.Text = labelTotalPrice
+
 
 
 

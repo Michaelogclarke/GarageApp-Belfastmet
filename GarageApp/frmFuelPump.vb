@@ -1,13 +1,11 @@
-﻿Imports System.Reflection
-
-Public Class frmFuelPump
+﻿Public Class frmFuelPump
     Dim dataSet As New DataSet("MyDataSet")
     Dim mydataTable As New DataTable("MyTable")
 
     Private Sub frmFuelPump_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         mydataTable.Columns.Add("Total Price", GetType(Double))
-        DataSet.Tables.Add(mydataTable)
+        dataSet.Tables.Add(mydataTable)
 
     End Sub
 
@@ -33,23 +31,25 @@ Public Class frmFuelPump
 
 
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
-        'Checkout.Show()
-        'Me.Hide()
-        'Me.Dispose()
+        'TODO Delete later if not needed
         'TODO find a way to write total price and total pumed to a dataset here
-        Try
-            Dim labelValue As Double = Val(lblPriceAmount.Text.Replace("£", ""))
+        'Try
+        'Dim labelValue As Double = Val(lblPriceAmount.Text.Replace("£", ""))
+        '
+        '       Dim newRow As DataRow = mydataTable.NewRow()
+        '      newRow("Total Price") = labelValue
+        '     mydataTable.Rows.Add(newRow)
+        '
+        ' MessageBox.Show("Total Price added: " & labelValue)
 
-            Dim newRow As DataRow = mydataTable.NewRow()
-            newRow("Total Price") = labelValue
-            mydataTable.Rows.Add(newRow)
+        ' Catch ex As Exception
+        'MessageBox.Show("Failed as an exception")
+        'End Try
+        labelTotalPrice = lblPriceAmount.Text
 
-            MessageBox.Show("Total Price added: " & labelValue)
-
-        Catch ex As Exception
-            MessageBox.Show("Failed as an exception")
-        End Try
-
+        Checkout.Show()
+        Me.Hide()
+        Me.Dispose()
     End Sub
 
     Private Sub rbDiesel_CheckedChanged(sender As Object, e As EventArgs) Handles rbDiesel.CheckedChanged
