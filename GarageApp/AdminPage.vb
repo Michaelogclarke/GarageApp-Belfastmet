@@ -1,5 +1,5 @@
 ﻿Public Class AdminPage
-    Private Const XmlFilePath As String = "FuelData.xml"
+    Private Const XmlFilePath As String = "/FuelData.xml"
     Private Sub AdminPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmFuelPump.lblLitresAmount = lblTotalFuel
         modGlobals.LoadFuelDataFromXML(XmlFilePath)

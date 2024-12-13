@@ -26,6 +26,8 @@
 
     Public Sub AddFuel(fuel As Double, price As Double)
         FuelData.Rows.Add(fuel, price, DateTime.Now)
+        saveFuelDataToXml("FuelData.xml")
+
     End Sub
     Public Sub saveFuelDataToXml(filePath As String)
         Try
@@ -47,4 +49,5 @@
             MessageBox.Show($"Failed to load data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
 End Module
