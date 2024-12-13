@@ -1,11 +1,8 @@
 ﻿Public Class frmFuelPump
-    Dim dataSet As New DataSet("MyDataSet")
-    Dim mydataTable As New DataTable("MyTable")
+
 
     Private Sub frmFuelPump_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        mydataTable.Columns.Add("Total Price", GetType(Double))
-        dataSet.Tables.Add(mydataTable)
 
     End Sub
 
@@ -32,6 +29,7 @@
 
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
         'TODO Delete later if not needed
+
         'TODO find a way to write total price and total pumed to a dataset here
         'Try
         'Dim labelValue As Double = Val(lblPriceAmount.Text.Replace("£", ""))
