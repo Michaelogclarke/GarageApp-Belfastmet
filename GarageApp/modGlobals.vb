@@ -25,6 +25,26 @@
     End Sub
 
     Public Sub AddFuel(fuel As Double, price As Double)
-        FuelData.Rows.Add(fuel, price)
+        FuelData.Rows.Add(fuel, price, DateTime.Now)
+    End Sub
+    Public Sub saveFuelDataToXml(filePath As String)
+        Try
+            FuelData.WriteXml(filePath, XmlWriteMode.WriteSchema)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Public Sub LoadFuelDataFromXML(filePath As String)
+        Try
+            ' Ensure the table structure is initialized
+            InitializeFuelData()
+
+            ' Check if the file exists
+            If IO.File.Exists(filePath) Then
+                FuelData.ReadXml(filePath)
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"Failed to load data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Module
