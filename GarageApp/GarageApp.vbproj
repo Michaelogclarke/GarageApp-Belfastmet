@@ -93,6 +93,12 @@
     <Compile Include="AdminPage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="admintest.Designer.vb">
+      <DependentUpon>admintest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admintest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Checkout.Designer.vb">
       <DependentUpon>Checkout.vb</DependentUpon>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admintest.resx">
+      <DependentUpon>admintest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Checkout.resx">
       <DependentUpon>Checkout.vb</DependentUpon>

@@ -6,7 +6,7 @@
     End Sub
 
     Private Sub btnAdminLogin_Click(sender As Object, e As EventArgs) Handles btnAdminLogin.Click
-        AdminLogin.Show()
+        admintest.Show()
         Me.Hide()
         Me.Dispose()
     End Sub

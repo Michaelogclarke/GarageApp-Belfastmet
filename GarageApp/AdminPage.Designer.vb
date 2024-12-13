@@ -27,12 +27,10 @@ Partial Class AdminPage
         Me.AdminDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AdminData = New GarageApp.AdminData()
         Me.TotalFuelPumpedBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.FrmFuelPumpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.AdminDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AdminData, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TotalFuelPumpedBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrmFuelPumpBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,14 +58,6 @@ Partial Class AdminPage
         Me.TotalFuelPumpedBindingSource.DataMember = "Total Fuel pumped"
         Me.TotalFuelPumpedBindingSource.DataSource = Me.AdminDataBindingSource
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(129, 116)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(547, 284)
-        Me.DataGridView1.TabIndex = 1
-        '
         'FrmFuelPumpBindingSource
         '
         Me.FrmFuelPumpBindingSource.DataSource = GetType(GarageApp.frmFuelPump)
@@ -78,14 +68,12 @@ Partial Class AdminPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MediumPurple
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblTotalFuel)
         Me.Name = "AdminPage"
         Me.Text = "AdminPage"
         CType(Me.AdminDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AdminData, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TotalFuelPumpedBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FrmFuelPumpBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -97,5 +85,4 @@ Partial Class AdminPage
     Friend WithEvents AdminData As AdminData
     Friend WithEvents FrmFuelPumpBindingSource As BindingSource
     Friend WithEvents TotalFuelPumpedBindingSource As BindingSource
-    Friend WithEvents DataGridView1 As DataGridView
 End Class
