@@ -1,9 +1,12 @@
 ﻿Imports System.Reflection
 
-
 Public Class frmFuelPump
-
     Private Sub frmFuelPump_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim dataSet As New DataSet("MyDataSet")
+        Dim mydataTable As New DataTable("MyTable")
+
+        mydataTable.Columns.Add("Total Price", GetType(Double))
+        dataSet.Tables.Add(mydataTable)
 
     End Sub
 
@@ -33,6 +36,19 @@ Public Class frmFuelPump
         Me.Hide()
         Me.Dispose()
         'TODO find a way to write total price and total pumed to a dataset here
+        Try
+            ' Getting the total price
+            Dim labelValue As Double = Convert.ToDouble(lblPriceAmount.Text)
+
+            Dim newRow As DataRow = mydataTable.NewRow()
+            newRow("Total Price") = labelValue
+            mydataTable.Rows.Add(newRow)
+
+            MessageBox.Show("Total Price: " & labelValue)
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
     End Sub
 
     Private Sub rbDiesel_CheckedChanged(sender As Object, e As EventArgs) Handles rbDiesel.CheckedChanged
