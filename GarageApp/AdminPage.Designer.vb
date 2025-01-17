@@ -31,6 +31,14 @@ Partial Class AdminPage
         Me.lblPrice = New System.Windows.Forms.Label()
         Me.lblFueltxt = New System.Windows.Forms.Label()
         Me.lblPricetxt = New System.Windows.Forms.Label()
+        Me.btnChangePrice = New System.Windows.Forms.Button()
+        Me.txtboxDieselAM = New System.Windows.Forms.TextBox()
+        Me.txtboxPetrolAM = New System.Windows.Forms.TextBox()
+        Me.btnReturntofuel = New System.Windows.Forms.Button()
+        Me.lblDiesel = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblPetrolPrice = New System.Windows.Forms.Label()
+        Me.lblDieselPrice = New System.Windows.Forms.Label()
         Me.FrmFuelPumpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.AdminDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AdminData, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,6 +111,80 @@ Partial Class AdminPage
         Me.lblPricetxt.TabIndex = 4
         Me.lblPricetxt.Text = "Price Amount"
         '
+        'btnChangePrice
+        '
+        Me.btnChangePrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnChangePrice.Location = New System.Drawing.Point(321, 337)
+        Me.btnChangePrice.Name = "btnChangePrice"
+        Me.btnChangePrice.Size = New System.Drawing.Size(112, 59)
+        Me.btnChangePrice.TabIndex = 5
+        Me.btnChangePrice.Text = "Change Price"
+        Me.btnChangePrice.UseVisualStyleBackColor = True
+        '
+        'txtboxDieselAM
+        '
+        Me.txtboxDieselAM.Location = New System.Drawing.Point(174, 276)
+        Me.txtboxDieselAM.Name = "txtboxDieselAM"
+        Me.txtboxDieselAM.Size = New System.Drawing.Size(100, 20)
+        Me.txtboxDieselAM.TabIndex = 6
+        '
+        'txtboxPetrolAM
+        '
+        Me.txtboxPetrolAM.Location = New System.Drawing.Point(480, 276)
+        Me.txtboxPetrolAM.Name = "txtboxPetrolAM"
+        Me.txtboxPetrolAM.Size = New System.Drawing.Size(100, 20)
+        Me.txtboxPetrolAM.TabIndex = 7
+        '
+        'btnReturntofuel
+        '
+        Me.btnReturntofuel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReturntofuel.Location = New System.Drawing.Point(691, 397)
+        Me.btnReturntofuel.Name = "btnReturntofuel"
+        Me.btnReturntofuel.Size = New System.Drawing.Size(107, 41)
+        Me.btnReturntofuel.TabIndex = 8
+        Me.btnReturntofuel.Text = "Return to fuel pump"
+        Me.btnReturntofuel.UseVisualStyleBackColor = True
+        '
+        'lblDiesel
+        '
+        Me.lblDiesel.AutoSize = True
+        Me.lblDiesel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDiesel.Location = New System.Drawing.Point(170, 249)
+        Me.lblDiesel.Name = "lblDiesel"
+        Me.lblDiesel.Size = New System.Drawing.Size(110, 24)
+        Me.lblDiesel.TabIndex = 9
+        Me.lblDiesel.Text = "Diesel Price"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(476, 249)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(106, 24)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Petrol Price"
+        '
+        'lblPetrolPrice
+        '
+        Me.lblPetrolPrice.AutoSize = True
+        Me.lblPetrolPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPetrolPrice.Location = New System.Drawing.Point(476, 299)
+        Me.lblPetrolPrice.Name = "lblPetrolPrice"
+        Me.lblPetrolPrice.Size = New System.Drawing.Size(106, 24)
+        Me.lblPetrolPrice.TabIndex = 11
+        Me.lblPetrolPrice.Text = "Petrol Price"
+        '
+        'lblDieselPrice
+        '
+        Me.lblDieselPrice.AutoSize = True
+        Me.lblDieselPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDieselPrice.Location = New System.Drawing.Point(170, 299)
+        Me.lblDieselPrice.Name = "lblDieselPrice"
+        Me.lblDieselPrice.Size = New System.Drawing.Size(110, 24)
+        Me.lblDieselPrice.TabIndex = 12
+        Me.lblDieselPrice.Text = "Diesel Price"
+        '
         'FrmFuelPumpBindingSource
         '
         Me.FrmFuelPumpBindingSource.DataSource = GetType(GarageApp.frmFuelPump)
@@ -113,6 +195,14 @@ Partial Class AdminPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MediumPurple
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblDieselPrice)
+        Me.Controls.Add(Me.lblPetrolPrice)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblDiesel)
+        Me.Controls.Add(Me.btnReturntofuel)
+        Me.Controls.Add(Me.txtboxPetrolAM)
+        Me.Controls.Add(Me.txtboxDieselAM)
+        Me.Controls.Add(Me.btnChangePrice)
         Me.Controls.Add(Me.lblPricetxt)
         Me.Controls.Add(Me.lblFueltxt)
         Me.Controls.Add(Me.lblPrice)
@@ -138,4 +228,12 @@ Partial Class AdminPage
     Friend WithEvents lblPrice As Label
     Friend WithEvents lblFueltxt As Label
     Friend WithEvents lblPricetxt As Label
+    Friend WithEvents btnChangePrice As Button
+    Friend WithEvents txtboxDieselAM As TextBox
+    Friend WithEvents txtboxPetrolAM As TextBox
+    Friend WithEvents btnReturntofuel As Button
+    Friend WithEvents lblDiesel As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents lblPetrolPrice As Label
+    Friend WithEvents lblDieselPrice As Label
 End Class
