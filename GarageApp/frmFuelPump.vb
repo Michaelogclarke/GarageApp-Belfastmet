@@ -28,23 +28,9 @@
 
 
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
-        'TODO Delete later if not needed
-
-        'TODO find a way to write total price and total pumed to a dataset here
-        'Try
-        'Dim labelValue As Double = Val(lblPriceAmount.Text.Replace("£", ""))
-        '
-        '       Dim newRow As DataRow = mydataTable.NewRow()
-        '      newRow("Total Price") = labelValue
-        '     mydataTable.Rows.Add(newRow)
-        '
-        ' MessageBox.Show("Total Price added: " & labelValue)
-
-        ' Catch ex As Exception
-        'MessageBox.Show("Failed as an exception")
-        'End Try
         labelTotalPrice = lblPriceAmount.Text
         labelTotalFuel = lblLitresAmount.Text
+        AdminPage.DataGridView1.Rows.Add(lblLitresAmount.Text, lblPriceAmount.Text)
         Checkout.Show()
         Me.Hide()
         Me.Dispose()

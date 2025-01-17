@@ -23,14 +23,8 @@ Partial Class AdminPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.lblrecent = New System.Windows.Forms.Label()
         Me.AdminDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AdminData = New GarageApp.AdminData()
         Me.TotalFuelPumpedBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.lblFuel = New System.Windows.Forms.Label()
-        Me.lblPrice = New System.Windows.Forms.Label()
-        Me.lblFueltxt = New System.Windows.Forms.Label()
-        Me.lblPricetxt = New System.Windows.Forms.Label()
         Me.btnChangePrice = New System.Windows.Forms.Button()
         Me.txtboxDieselAM = New System.Windows.Forms.TextBox()
         Me.txtboxPetrolAM = New System.Windows.Forms.TextBox()
@@ -39,77 +33,20 @@ Partial Class AdminPage
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblPetrolPrice = New System.Windows.Forms.Label()
         Me.lblDieselPrice = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Fuel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.FrmFuelPumpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.AdminDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AdminData, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TotalFuelPumpedBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrmFuelPumpBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblrecent
-        '
-        Me.lblrecent.AutoSize = True
-        Me.lblrecent.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblrecent.Location = New System.Drawing.Point(287, 85)
-        Me.lblrecent.Name = "lblrecent"
-        Me.lblrecent.Size = New System.Drawing.Size(165, 24)
-        Me.lblrecent.TabIndex = 0
-        Me.lblrecent.Text = "Recent transaction"
-        '
-        'AdminDataBindingSource
-        '
-        Me.AdminDataBindingSource.DataSource = Me.AdminData
-        Me.AdminDataBindingSource.Position = 0
-        '
-        'AdminData
-        '
-        Me.AdminData.DataSetName = "AdminData"
-        Me.AdminData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'TotalFuelPumpedBindingSource
         '
-        Me.TotalFuelPumpedBindingSource.DataMember = "Total Fuel pumped"
         Me.TotalFuelPumpedBindingSource.DataSource = Me.AdminDataBindingSource
-        '
-        'lblFuel
-        '
-        Me.lblFuel.AutoSize = True
-        Me.lblFuel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFuel.Location = New System.Drawing.Point(170, 141)
-        Me.lblFuel.Name = "lblFuel"
-        Me.lblFuel.Size = New System.Drawing.Size(119, 24)
-        Me.lblFuel.TabIndex = 1
-        Me.lblFuel.Text = "Fuel Amount"
-        '
-        'lblPrice
-        '
-        Me.lblPrice.AutoSize = True
-        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrice.Location = New System.Drawing.Point(476, 141)
-        Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(124, 24)
-        Me.lblPrice.TabIndex = 2
-        Me.lblPrice.Text = "Price Amount"
-        '
-        'lblFueltxt
-        '
-        Me.lblFueltxt.AutoSize = True
-        Me.lblFueltxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFueltxt.Location = New System.Drawing.Point(170, 185)
-        Me.lblFueltxt.Name = "lblFueltxt"
-        Me.lblFueltxt.Size = New System.Drawing.Size(119, 24)
-        Me.lblFueltxt.TabIndex = 3
-        Me.lblFueltxt.Text = "Fuel Amount"
-        '
-        'lblPricetxt
-        '
-        Me.lblPricetxt.AutoSize = True
-        Me.lblPricetxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPricetxt.Location = New System.Drawing.Point(476, 185)
-        Me.lblPricetxt.Name = "lblPricetxt"
-        Me.lblPricetxt.Size = New System.Drawing.Size(124, 24)
-        Me.lblPricetxt.TabIndex = 4
-        Me.lblPricetxt.Text = "Price Amount"
         '
         'btnChangePrice
         '
@@ -185,6 +122,40 @@ Partial Class AdminPage
         Me.lblDieselPrice.TabIndex = 12
         Me.lblDieselPrice.Text = "Diesel Price"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Fuel, Me.Total})
+        Me.DataGridView1.Location = New System.Drawing.Point(148, 82)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(434, 164)
+        Me.DataGridView1.TabIndex = 13
+        '
+        'Fuel
+        '
+        Me.Fuel.HeaderText = "Fuel"
+        Me.Fuel.Name = "Fuel"
+        Me.Fuel.ReadOnly = True
+        '
+        'Total
+        '
+        Me.Total.HeaderText = "Total"
+        Me.Total.Name = "Total"
+        Me.Total.ReadOnly = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(323, 55)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(182, 24)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Recent Transactions"
+        '
         'FrmFuelPumpBindingSource
         '
         Me.FrmFuelPumpBindingSource.DataSource = GetType(GarageApp.frmFuelPump)
@@ -195,6 +166,8 @@ Partial Class AdminPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MediumPurple
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblDieselPrice)
         Me.Controls.Add(Me.lblPetrolPrice)
         Me.Controls.Add(Me.Label2)
@@ -203,31 +176,19 @@ Partial Class AdminPage
         Me.Controls.Add(Me.txtboxPetrolAM)
         Me.Controls.Add(Me.txtboxDieselAM)
         Me.Controls.Add(Me.btnChangePrice)
-        Me.Controls.Add(Me.lblPricetxt)
-        Me.Controls.Add(Me.lblFueltxt)
-        Me.Controls.Add(Me.lblPrice)
-        Me.Controls.Add(Me.lblFuel)
-        Me.Controls.Add(Me.lblrecent)
         Me.Name = "AdminPage"
         Me.Text = "AdminPage"
         CType(Me.AdminDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AdminData, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TotalFuelPumpedBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FrmFuelPumpBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents lblrecent As Label
     Friend WithEvents AdminDataBindingSource As BindingSource
-    Friend WithEvents AdminData As AdminData
     Friend WithEvents FrmFuelPumpBindingSource As BindingSource
     Friend WithEvents TotalFuelPumpedBindingSource As BindingSource
-    Friend WithEvents lblFuel As Label
-    Friend WithEvents lblPrice As Label
-    Friend WithEvents lblFueltxt As Label
-    Friend WithEvents lblPricetxt As Label
     Friend WithEvents btnChangePrice As Button
     Friend WithEvents txtboxDieselAM As TextBox
     Friend WithEvents txtboxPetrolAM As TextBox
@@ -236,4 +197,8 @@ Partial Class AdminPage
     Friend WithEvents Label2 As Label
     Friend WithEvents lblPetrolPrice As Label
     Friend WithEvents lblDieselPrice As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Fuel As DataGridViewTextBoxColumn
+    Friend WithEvents Total As DataGridViewTextBoxColumn
+    Friend WithEvents Label1 As Label
 End Class

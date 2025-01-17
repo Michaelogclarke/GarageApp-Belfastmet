@@ -3,8 +3,6 @@
 Public Class AdminPage
     Private Sub AdminPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If System.IO.File.Exists("fuelAmount.txt") Then
-            lblFueltxt.Text = System.IO.File.ReadAllText("fuelAmount.txt")
-            lblPricetxt.Text = System.IO.File.ReadAllText("fuelPrice.txt")
             lblDieselPrice.Text = PriceDiesel
             lblPetrolPrice.Text = PricePetrol
 
@@ -37,6 +35,10 @@ Public Class AdminPage
     End Sub
 
     Private Sub txtboxPetrolAM_TextChanged(sender As Object, e As EventArgs) Handles txtboxPetrolAM.TextChanged
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 End Class
